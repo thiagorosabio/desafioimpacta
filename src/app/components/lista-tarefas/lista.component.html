@@ -1,0 +1,6 @@
+﻿<h2>Lista de Tarefas</h2>
+<a routerLink="/novo" class="btn">+ Nova</a>
+<table *ngIf="tarefas.length" style="width:100%;border-collapse:collapse;margin-top:15px">
+  <thead><tr><th>Título</th><th>Status</th><th>Ações</th></tr></thead>
+  <tbody><tr *ngFor="let t of tarefas"><td>{{t.titulo}}</td><td>{{t.status}}</td><td><a [routerLink]="['/editar',t.id]">Editar</a> | <button (click)="excluir(t.id)" style="color:red">Excluir</button></td></tr></tbody>
+</table>

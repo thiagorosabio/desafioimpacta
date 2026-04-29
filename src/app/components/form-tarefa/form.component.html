@@ -1,0 +1,7 @@
+﻿<h2>{{ isEdit ? 'Editar' : 'Nova' }} Tarefa</h2>
+<form (ngSubmit)="salvar()" style="display:flex;flex-direction:column;gap:10px;max-width:400px">
+  <label>Título:</label><input [(ngModel)]="t.titulo" name="titulo" required>
+  <label>Descrição:</label><textarea [(ngModel)]="t.descricao" name="desc"></textarea>
+  <label>Status:</label><select [(ngModel)]="t.status" name="status"><option>Pendente</option><option>Concluída</option></select>
+  <button type="submit">Salvar</button><a routerLink="/">Cancelar</a>
+</form>
